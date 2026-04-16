@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saiba mais sobre o Centro Educacional Salute, transformando vidas através da educação há mais de 25 anos.">
+    <title>Sobre Nós — Centro Educacional Salute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 140px 24px 60px;
+            background: linear-gradient(135deg, #0f1624 0%, #005eff22 100%);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--white);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .about-page-content {
+            background: var(--black);
+            padding: 80px 24px;
+        }
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .about-text-block {
+            margin-bottom: 60px;
+        }
+        .about-text-block h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-text-block h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        .about-text-block p {
+            font-size: 1.15rem;
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .about-stat-item {
+            background: var(--dark);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: transform 0.3s;
+        }
+        .about-stat-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+        .about-stat-item i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        .about-stat-item strong {
+            font-size: 2.5rem;
+            color: var(--white);
+            display: block;
+            margin-bottom: 10px;
+        }
+        .about-stat-item span {
+            color: #888;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Salute Centro Educacional" class="nav-logo-img">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="sobre.html" class="nav-item">Sobre Nós</a>
+                <a href="index.html#cursos" class="nav-item">Cursos</a>
+                <a href="index.html#destaques" class="nav-item">Destaques</a>
+                <a href="index.html#aprovados" class="nav-item">Aprovados</a>
+            </div>
+
+            <div class="nav-actions" id="navActions">
+                <a href="https://wa.me/5500000000000" class="nav-whatsapp">
+                    <i class="ri-whatsapp-line"></i> WhatsApp
+                </a>
+                <a href="#" class="btn-login">LOGIN</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HEADER DA PÁGINA -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Sobre Nós</h1>
+            <p style="color: #ccc; font-size: 1.2rem;">Conheça a história e os valores do Centro Educacional Salute.</p>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="about-page-content">
+        <div class="container">
+            <div class="about-container">
+                
+                <section class="about-text-block">
+                    <h2>Nossa História</h2>
+                    <p>O Centro Educacional Salute, com mais de 25 anos foi idealizado na certeza de que a Educação transforma, apoia e humaniza. Através do acesso ao ensino profissionalizante e de acordo com a Lei de Diretrizes e Bases da Educação, com a finalidade de preparar “para o exercício de profissões”, apresenta ao seu aluno o mundo do trabalho e a vida corporativa e em sociedade.</p>
+                    <p>Em sua história, já qualificou milhares de profissionais na área da saúde. Em cada aluno que passou por nossas salas de aula, deixamos um legado de conhecimento técnica e, acima de tudo, respeito à vida.</p>
+                </section>
+
+                <section class="about-text-block">
+                    <h2>Nossa Missão</h2>
+                    <p>Com experiência e credibilidade, o Centro Educacional Salute está sempre em busca de mudanças e atualizações, oferecendo sempre o melhor aos seus alunos. Nossa missão é ser a ponte entre o sonho da profissionalização e a realidade do mercado de trabalho.</p>
+                </section>
+
+                <div class="about-stats">
+                    <div class="about-stat-item">
+                        <i class="ri-history-line"></i>
+                        <strong>25+</strong>
+                        <span>Anos de História</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <i class="ri-group-line"></i>
+                        <strong>15k+</strong>
+                        <span>Alunos Qualificados</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <i class="ri-medal-line"></i>
+                        <strong>100%</strong>
+                        <span>Credibilidade</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.05);">
+            <div class="container footer-bottom-inner" style="padding:40px 0;">
+                <p>© 2026 Centro Educacional Salute. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="index.html">Início</a>
+                    <a href="sobre.html">Sobre Nós</a>
+                    <a href="politica.html">Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

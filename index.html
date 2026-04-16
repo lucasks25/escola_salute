@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A plataforma de ensino mais completa para a sua aprovação. Cursos, simulados e muito mais.">
+    <title>EduPlatform — Estude a Qualquer Hora e Lugar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Salute Centro Educacional" class="nav-logo-img">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="sobre.html" class="nav-item">Sobre Nós</a>
+                <div class="nav-item has-dropdown">
+                    <a href="#cursos">Cursos <i class="ri-arrow-down-s-line"></i></a>
+                    <div class="dropdown">
+                        <a href="#cursos">Extensivo</a>
+                        <a href="#cursos">Intensivo</a>
+                        <a href="#cursos">Revalida</a>
+                    </div>
+                </div>
+                <a href="#destaques" class="nav-item">Destaques</a>
+                <a href="#aprovados" class="nav-item">Aprovados</a>
+                <a href="#blog" class="nav-item">Blog</a>
+            </div>
+
+            <div class="nav-actions" id="navActions">
+                <a href="#" class="nav-whatsapp">
+                    <i class="ri-whatsapp-line"></i> Fale com Consultor
+                </a>
+                <a href="#" class="btn-login">Login</a>
+                <a href="#" class="btn-primary-nav">Teste Grátis</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#quemsomos">Quem Somos</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#aprovados">Aprovados</a>
+        <a href="#blog">Blog</a>
+        <hr>
+        <a href="#" class="drawer-whatsapp"><i class="ri-whatsapp-line"></i> Fale com Consultor</a>
+        <a href="#" class="drawer-login">Login</a>
+        <a href="#" class="drawer-cta">Teste Grátis</a>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- ============================================================
+         HERO — Slider
+    ============================================================ -->
+    <header class="hero" id="hero">
+        <!-- Slider track -->
+        <div class="hero-slides" id="heroSlides">
+
+            <div class="hero-slide banner-slide active" style="--slide-bg: #0f1624;">
+                <img src="assets/banner-salute.png" alt="EAD Salute - Estude no seu tempo" class="slide-full-image">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ============================================================
+         TAGLINE STRIP
+    ============================================================ -->
+    <section class="tagline-strip">
+        <div class="strip-inner">
+            <h2>A Plataforma prepara você para <br><span>todos os desafios da sua carreira!</span></h2>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         COURSES
+    ============================================================ -->
+    <section class="courses-section" id="cursos">
+        <div class="container">
+            <!-- Filters -->
+            <div class="course-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Todos</button>
+                    <button class="filter-tab" data-filter="extensivo">Extensivo</button>
+                    <button class="filter-tab" data-filter="intensivo">Intensivo</button>
+                    <button class="filter-tab" data-filter="revalida">Revalida</button>
+                </div>
+                <div class="filter-selects">
+                    <select class="filter-select" aria-label="Ano">
+                        <option>Ano do curso</option>
+                        <option>2026</option>
+                        <option>2025</option>
+                    </select>
+                    <select class="filter-select" aria-label="Modalidade">
+                        <option>Modalidade</option>
+                        <option>Online</option>
+                        <option>Híbrido</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="courses-grid" id="coursesGrid">
+
+                <!-- Course 1 -->
+                <article class="course-card" data-category="extensivo" onclick="openCourseModal(1)">
+                    <div class="card-top">
+                        <span class="cat-badge extensivo">Enfermagem</span>
+                        <h3>Técnico em Enfermagem</h3>
+                        <p class="card-year">Formação Profissional</p>
+                        <p class="card-desc">Prepare-se para atuar em hospitais, clínicas e unidades de saúde com a melhor infraestrutura e professores experientes.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 2 -->
+                <article class="course-card featured" data-category="intensivo" onclick="openCourseModal(2)">
+                    <div class="card-top">
+                        <span class="cat-badge intensivo">Radiologia</span>
+                        <h3>Técnico em Radiologia</h3>
+                        <p class="card-year">Formação Profissional</p>
+                        <p class="card-desc">Domine as técnicas de diagnóstico por imagem e destaque-se no mercado de trabalho com certificação reconhecida.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 3 -->
+                <article class="course-card" data-category="revalida" onclick="openCourseModal(3)">
+                    <div class="card-top">
+                        <span class="cat-badge revalida">Estética</span>
+                        <h3>Técnico em Estética</h3>
+                        <p class="card-year">Formação Profissional</p>
+                        <p class="card-desc">Aprenda tratamentos faciais e corporais com foco em resultados e bem-estar. O mercado de beleza espera por você.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 4 -->
+                <article class="course-card" data-category="extensivo" onclick="openCourseModal(4)">
+                    <div class="card-top">
+                        <span class="cat-badge extensivo">Farmácia</span>
+                        <h3>Auxiliar de Farmácia</h3>
+                        <p class="card-year">Curso Profissionalizante</p>
+                        <p class="card-desc">Atue em drogarias e farmácias hospitalares auxiliando no controle e dispensação de medicamentos.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 5 -->
+                <article class="course-card" data-category="intensivo" onclick="openCourseModal(5)">
+                    <div class="card-top">
+                        <span class="cat-badge intensivo">Segurança</span>
+                        <h3>Segurança do Trabalho</h3>
+                        <p class="card-year">Técnico</p>
+                        <p class="card-desc">Garanta a integridade física dos trabalhadores e o cumprimento das normas regulamentadoras em empresas.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 6 -->
+                <article class="course-card" data-category="revalida" onclick="openCourseModal(6)">
+                    <div class="card-top">
+                        <span class="cat-badge revalida">Saúde</span>
+                        <h3>Cuidador de Idosos</h3>
+                        <p class="card-year">Capacitação</p>
+                        <p class="card-desc">Curso humanizado para profissionais que desejam cuidar de idosos com excelência e dedicação.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 7 -->
+                <article class="course-card" data-category="extensivo" onclick="openCourseModal(7)">
+                    <div class="card-top">
+                        <span class="cat-badge extensivo">Gestão</span>
+                        <h3>Administração em Saúde</h3>
+                        <p class="card-year">Especialização</p>
+                        <p class="card-desc">Foque na gestão de processos e pessoas dentro do ambiente hospitalar e clínico.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 8 -->
+                <article class="course-card" data-category="revalida" onclick="openCourseModal(8)">
+                    <div class="card-top">
+                        <span class="cat-badge revalida">Laboratório</span>
+                        <h3>Análises Clínicas</h3>
+                        <p class="card-year">Técnico</p>
+                        <p class="card-desc">Capacite-se para realizar exames laboratoriais e auxiliar diagnósticos médicos com precisão.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+                <!-- Course 9 -->
+                <article class="course-card" data-category="intensivo" onclick="openCourseModal(9)">
+                    <div class="card-top">
+                        <span class="cat-badge intensivo">Primeiros Socorros</span>
+                        <h3>Atendimento Pré-Hospitalar (APH)</h3>
+                        <p class="card-year">Treinamento</p>
+                        <p class="card-desc">Treinamento intensivo para casos de urgência e emergência, focado na preservação da vida.</p>
+                        <span class="card-link">Saiba mais <i class="ri-arrow-right-line"></i></span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-price">
+                            <span class="installment">Consulte condições de matricula</span>
+                            <div class="price-row">
+                                <span class="main-price">Valor Local</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5500000000000" class="btn-enroll">FALAR COM CONSULTOR</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Apresentação do Curso -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCourseModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Conteúdo preenchido dinamicamente via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         BENEFITS (fundo branco / cinza claro)
+    ============================================================ -->
+    <section class="benefits-section" id="destaques">
+        <div class="container">
+            <div class="benefits-layout">
+                <div class="benefits-left">
+                    <span class="section-label">Mentoria</span>
+                    <h2>Conte com especialistas que já viveram o mesmo desafio que o seu</h2>
+                    <p>Além de compartilhar experiências e fornecer dicas valiosas, nossos mentores direcionam as
+                        estratégias de estudos de acordo com as suas dificuldades.</p>
+                </div>
+                <div class="benefits-right">
+                    <h3 class="benefits-sub">Conheça alguns benefícios:</h3>
+                    <div class="benefits-cards">
+                        <div class="benefit-card">
+                            <i class="ri-calendar-check-line"></i>
+                            <p>Direcionamento personalizado dos estudos — foque nos conteúdos mais relevantes e otimize
+                                seu tempo.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ri-mental-health-line"></i>
+                            <p>Apoio motivacional — mantenha a disciplina e a confiança ao longo de toda a jornada de
+                                preparação.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ri-road-map-line"></i>
+                            <p>Auxílio na escolha da especialização — receba orientações baseadas no seu perfil e
+                                expectativas de carreira.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <i class="ri-chat-check-line"></i>
+                            <p>Troca de experiências — aprenda com quem já passou pelo processo e tem um canal direto
+                                para te responder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         STATS — "Quem aprova faz EduPlatform"
+    ============================================================ -->
+    <section class="stats-section" id="aprovados">
+        <div class="stats-header">
+            <h2>Quem aprova, estuda na <span>EduPlatform.</span></h2>
+        </div>
+        <div class="stats-grid-wrap">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-user-star-line"></i></div>
+                    <div class="stat-val">+15.000</div>
+                    <div class="stat-label">Alunos aprovados</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-val">98%</div>
+                    <div class="stat-label">Taxa de aprovação</div>
+                    <div class="stat-sub">nos últimos 3 anos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="ri-question-answer-line"></i></div>
+                    <div class="stat-val">+100k</div>
+                    <div class="stat-label">Questões no banco</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="stat-val">24/7</div>
+                    <div class="stat-label">Suporte especializado</div>
+                    <div class="stat-sub">todos os dias do ano</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que dizem nossos alunos</h2>
+                <p>Histórias reais de quem conquistou a aprovação.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p>"A metodologia da plataforma me deu a estrutura que eu precisava. Fui aprovado na primeira
+                        tentativa!"</p>
+                    <div class="t-author">
+                        <div class="t-avatar">JM</div>
+                        <div>
+                            <strong>João Mendes</strong>
+                            <span>Aprovado — Santa Casa SP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p>"Os simulados semanais e a análise de desempenho foram o diferencial pra eu entender onde
+                        precisava melhorar."</p>
+                    <div class="t-author">
+                        <div class="t-avatar">AC</div>
+                        <div>
+                            <strong>Ana Carvalho</strong>
+                            <span>Aprovada — USP Ribeirão</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">★★★★★</div>
+                    <p>"Estudei 8 meses com a plataforma e a mentoria fez toda a diferença. Recomendo 100% para todos."
+                    </p>
+                    <div class="t-author">
+                        <div class="t-avatar">RP</div>
+                        <div>
+                            <strong>Rafael Pinto</strong>
+                            <span>Aprovado — UNIFESP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" id="contato">
+        <div class="footer-top">
+            <div class="container footer-top-inner">
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo footer-logo">Edu<span>Platform</span></a>
+                    <p class="footer-tagline"><em>O conhecimento é a nossa escolha.</em></p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="#destaques">Nossa Metodologia</a></li>
+                        <li><a href="#aprovados">Aprovados</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Cursos</h4>
+                    <ul>
+                        <li><a href="#">Extensivo</a></li>
+                        <li><a href="#">Intensivo</a></li>
+                        <li><a href="#">Revalida</a></li>
+                        <li><a href="#">Mentoria Individual</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <ul>
+                        <li><a href="#"><i class="ri-mail-line"></i> contato@eduplataform.com.br</a></li>
+                        <li><a href="#"><i class="ri-whatsapp-line"></i> Compre pelo WhatsApp</a></li>
+                        <li><a href="#"><i class="ri-headphone-line"></i> Ouvidoria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Baixe o App</h4>
+                    <div class="store-btns">
+                        <a href="#" class="store-btn">
+                            <i class="ri-apple-fill"></i>
+                            <span><small>Baixar na</small>App Store</span>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <i class="ri-google-play-fill"></i>
+                            <span><small>Disponível no</small>Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© 2026 Centro Educacional Salute. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Trabalhe Conosco</a>
+                    <a href="politica.html">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating CTA bar (bottom right, like Medcel) -->
+    <div class="float-cta">
+        <a href="#" class="float-btn secondary"><i class="ri-question-line"></i> Tire suas Dúvidas</a>
+        <a href="#" class="float-btn primary"><i class="ri-graduation-cap-line"></i> Teste Grátis</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
